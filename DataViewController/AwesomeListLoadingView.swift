@@ -29,7 +29,7 @@ class AwesomeListLoadingView: UIView, Presenter {
         fatalError("init(coder:) has not been implemented")
     }
     
-    static func instance() -> Self {
+    static func instance(by coordinator: AnyObject) -> Self {
         return self.init(frame: .zero)
     }
 }

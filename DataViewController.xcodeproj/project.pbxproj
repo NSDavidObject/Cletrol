@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CC87A2A1E63905F007778CE /* DelegationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC87A281E63905F007778CE /* DelegationViewController.swift */; };
-		0CC87A2B1E63905F007778CE /* PresentionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC87A291E63905F007778CE /* PresentionCoordinator.swift */; };
-		0CC87A2F1E63906E007778CE /* ContentDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC87A2C1E63906E007778CE /* ContentDataPresenter.swift */; };
-		0CC87A301E63906E007778CE /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC87A2D1E63906E007778CE /* Presenter.swift */; };
-		0CC87A311E63906E007778CE /* FailureDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC87A2E1E63906E007778CE /* FailureDataPresenter.swift */; };
-		0CC87A331E63928C007778CE /* DelegationViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC87A321E63928C007778CE /* DelegationViewControllerTransitionAnimator.swift */; };
+		0CA3C4531E6BED6300FF9F7D /* DelegationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3C4501E6BED6300FF9F7D /* DelegationViewController.swift */; };
+		0CA3C4541E6BED6300FF9F7D /* DelegationViewControllerTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3C4511E6BED6300FF9F7D /* DelegationViewControllerTransitionAnimator.swift */; };
+		0CA3C4551E6BED6300FF9F7D /* PresentationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3C4521E6BED6300FF9F7D /* PresentationCoordinator.swift */; };
+		0CA3C4591E6BED6A00FF9F7D /* ContentDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3C4561E6BED6A00FF9F7D /* ContentDataPresenter.swift */; };
+		0CA3C45A1E6BED6A00FF9F7D /* FailureDataPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3C4571E6BED6A00FF9F7D /* FailureDataPresenter.swift */; };
+		0CA3C45B1E6BED6A00FF9F7D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA3C4581E6BED6A00FF9F7D /* Presenter.swift */; };
 		55C3048A1E6000A000BC675E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C304891E6000A000BC675E /* AppDelegate.swift */; };
 		55C3048C1E6000A000BC675E /* AwesomeListContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C3048B1E6000A000BC675E /* AwesomeListContentViewController.swift */; };
 		55C3048F1E6000A000BC675E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C3048D1E6000A000BC675E /* Main.storyboard */; };
@@ -24,12 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0CC87A281E63905F007778CE /* DelegationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegationViewController.swift; path = DataDelegator/DelegationViewController.swift; sourceTree = "<group>"; };
-		0CC87A291E63905F007778CE /* PresentionCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentionCoordinator.swift; path = DataDelegator/PresentionCoordinator.swift; sourceTree = "<group>"; };
-		0CC87A2C1E63906E007778CE /* ContentDataPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentDataPresenter.swift; path = DataDelegator/Presenters/ContentDataPresenter.swift; sourceTree = "<group>"; };
-		0CC87A2D1E63906E007778CE /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presenter.swift; path = DataDelegator/Presenters/Presenter.swift; sourceTree = "<group>"; };
-		0CC87A2E1E63906E007778CE /* FailureDataPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureDataPresenter.swift; path = DataDelegator/Presenters/FailureDataPresenter.swift; sourceTree = "<group>"; };
-		0CC87A321E63928C007778CE /* DelegationViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegationViewControllerTransitionAnimator.swift; path = DataDelegator/DelegationViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
+		0CA3C4501E6BED6300FF9F7D /* DelegationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegationViewController.swift; path = Cletrol/DelegationViewController.swift; sourceTree = "<group>"; };
+		0CA3C4511E6BED6300FF9F7D /* DelegationViewControllerTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DelegationViewControllerTransitionAnimator.swift; path = Cletrol/DelegationViewControllerTransitionAnimator.swift; sourceTree = "<group>"; };
+		0CA3C4521E6BED6300FF9F7D /* PresentationCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PresentationCoordinator.swift; path = Cletrol/PresentationCoordinator.swift; sourceTree = "<group>"; };
+		0CA3C4561E6BED6A00FF9F7D /* ContentDataPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContentDataPresenter.swift; path = Cletrol/Presenters/ContentDataPresenter.swift; sourceTree = "<group>"; };
+		0CA3C4571E6BED6A00FF9F7D /* FailureDataPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FailureDataPresenter.swift; path = Cletrol/Presenters/FailureDataPresenter.swift; sourceTree = "<group>"; };
+		0CA3C4581E6BED6A00FF9F7D /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Presenter.swift; path = Cletrol/Presenters/Presenter.swift; sourceTree = "<group>"; };
 		55C304861E6000A000BC675E /* DataViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C304891E6000A000BC675E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C3048B1E6000A000BC675E /* AwesomeListContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwesomeListContentViewController.swift; sourceTree = "<group>"; };
@@ -88,9 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				55C304A81E6025E200BC675E /* Presenters */,
-				0CC87A291E63905F007778CE /* PresentionCoordinator.swift */,
-				0CC87A281E63905F007778CE /* DelegationViewController.swift */,
-				0CC87A321E63928C007778CE /* DelegationViewControllerTransitionAnimator.swift */,
+				0CA3C4501E6BED6300FF9F7D /* DelegationViewController.swift */,
+				0CA3C4511E6BED6300FF9F7D /* DelegationViewControllerTransitionAnimator.swift */,
+				0CA3C4521E6BED6300FF9F7D /* PresentationCoordinator.swift */,
 			);
 			name = Framework;
 			sourceTree = "<group>";
@@ -98,9 +98,9 @@
 		55C304A81E6025E200BC675E /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				0CC87A2D1E63906E007778CE /* Presenter.swift */,
-				0CC87A2E1E63906E007778CE /* FailureDataPresenter.swift */,
-				0CC87A2C1E63906E007778CE /* ContentDataPresenter.swift */,
+				0CA3C4581E6BED6A00FF9F7D /* Presenter.swift */,
+				0CA3C4561E6BED6A00FF9F7D /* ContentDataPresenter.swift */,
+				0CA3C4571E6BED6A00FF9F7D /* FailureDataPresenter.swift */,
 			);
 			name = Presenters;
 			sourceTree = "<group>";
@@ -188,17 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CC87A311E63906E007778CE /* FailureDataPresenter.swift in Sources */,
+				0CA3C4531E6BED6300FF9F7D /* DelegationViewController.swift in Sources */,
+				0CA3C4541E6BED6300FF9F7D /* DelegationViewControllerTransitionAnimator.swift in Sources */,
 				55F97D281E614CCC00362E31 /* GeneralFailureController.swift in Sources */,
 				55C3048C1E6000A000BC675E /* AwesomeListContentViewController.swift in Sources */,
 				55C3048A1E6000A000BC675E /* AppDelegate.swift in Sources */,
+				0CA3C45A1E6BED6A00FF9F7D /* FailureDataPresenter.swift in Sources */,
+				0CA3C4551E6BED6300FF9F7D /* PresentationCoordinator.swift in Sources */,
+				0CA3C45B1E6BED6A00FF9F7D /* Presenter.swift in Sources */,
 				55F97D241E614C7100362E31 /* AwesomeListCoordinator.swift in Sources */,
 				55F97D261E614C9D00362E31 /* AwesomeListLoadingView.swift in Sources */,
-				0CC87A2A1E63905F007778CE /* DelegationViewController.swift in Sources */,
-				0CC87A301E63906E007778CE /* Presenter.swift in Sources */,
-				0CC87A2F1E63906E007778CE /* ContentDataPresenter.swift in Sources */,
-				0CC87A331E63928C007778CE /* DelegationViewControllerTransitionAnimator.swift in Sources */,
-				0CC87A2B1E63905F007778CE /* PresentionCoordinator.swift in Sources */,
+				0CA3C4591E6BED6A00FF9F7D /* ContentDataPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import UIKit
 public protocol Presenter: class {
     var presentedView: UIView! { get }
     weak var delegationController: UIViewController? { get set }
-    static func instance() -> Self
+    static func instance(by coordinator: AnyObject) -> Self
 }
 
 public extension Presenter where Self: UIViewController {

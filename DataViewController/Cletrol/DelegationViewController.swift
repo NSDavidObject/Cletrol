@@ -15,7 +15,7 @@ public enum DelegatorState {
     case succeeded(ContentPresenter)
 }
 
-public class DelegationViewController<C: PresentionCoordinator>: UIViewController {
+public class DelegationViewController<C: PresentationCoordinator>: UIViewController {
     
     public fileprivate(set) var loadingController: Presenter?
     public fileprivate(set) var contentController: ContentPresenter?
@@ -56,11 +56,11 @@ public class DelegationViewController<C: PresentionCoordinator>: UIViewControlle
         super.viewDidLoad()
         
         if let loadingControllerClass = coordinator.loadingControllerClass {
-            let loadingController = loadingControllerClass.instance()
+            let loadingController = loadingControllerClass.instance(by: coordinator)
             loadingController.delegationController = self
             loadData(with: loadingController)
         } else {
-            let contentController = coordinator.contentControllerClass.instance()
+            let contentController = coordinator.contentControllerClass.instance(by: coordinator)
             contentController.delegationController = self
             contentController.setup(with: nil)
             state = .succeeded(contentController)
@@ -78,13 +78,13 @@ public class DelegationViewController<C: PresentionCoordinator>: UIViewControlle
                     fatalError("Must provide failure presenter if loading controller presenter is provided and data loading might fail")
                 }
                 
-                let failureController = strongSelf.failureController ?? failureControllerClass.instance()
+                let failureController = failureControllerClass.instance(by: strongSelf.coordinator)
                 failureController.delegationController = self
                 failureController.delegate = strongSelf
                 failureController.setup(with: result, numberOfTries: strongSelf.numberOfRetries)
                 strongSelf.state = .failure(failureController)
             } else {
-                let contentController = strongSelf.coordinator.contentControllerClass.instance()
+                let contentController = strongSelf.coordinator.contentControllerClass.instance(by: strongSelf.coordinator)
                 contentController.delegationController = self
                 if #available(iOS 9.0, *) {
                     (contentController as? UIViewController)?.loadViewIfNeeded()
@@ -100,6 +100,7 @@ extension DelegationViewController: FailurePresenterDelegate {
     
     public func failureDataViewControllerDidRetry(_: FailurePresenter) {
         guard let loadingController = loadingController else { fatalError() }
+
         numberOfRetries += 1
         loadData(with: loadingController)
     }
@@ -139,12 +140,10 @@ fileprivate extension DelegationViewController {
     func instantiate(withContentController contentController: ContentPresenter) {
         self.contentController = contentController
         switchMainPresenter(to: contentController)
-        
     }
     
     func handleSwitch(fromLoadingController loadingController: Presenter, toContentController contentController: ContentPresenter) {
         self.loadingController = nil
-        self.failureController = nil
         
         self.contentController = contentController
         switchMainPresenter(from: loadingController, to: contentController)
@@ -156,6 +155,9 @@ fileprivate extension DelegationViewController {
     }
     
     func handleSwitch(fromFailureController failureController: FailurePresenter, toLoadingController loadingController: Presenter) {
+        self.failureController = nil
+
+        self.loadingController = loadingController
         switchMainPresenter(from: failureController, to: loadingController)
     }
     

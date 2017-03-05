@@ -1,5 +1,5 @@
 //
-//  PresentionCoordinator.swift
+//  PresentationCoordinator.swift
 //  DataViewController
 //
 //  Created by David Elsonbaty on 2/23/17.
@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - Coordinator
 
-public protocol PresentionCoordinator: class {
+public protocol PresentationCoordinator: class {
     associatedtype ResultType
     
     var contentControllerClass: ContentPresenter.Type { get }

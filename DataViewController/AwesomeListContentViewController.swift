@@ -11,7 +11,7 @@ import UIKit
 class AwesomeListContentViewController: UIViewController, ContentPresenter {
 
     weak var delegationController: UIViewController?
-    static func instance() -> Self {
+    static func instance(by coordinator: AnyObject) -> Self {
         return self.init(nibName: nil, bundle: nil)
     }
     

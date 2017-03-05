@@ -8,11 +8,7 @@
 
 import Foundation
 
-struct AwesomeListConent {
-    
-}
-
-class AwesomeListCoordinator: PresentionCoordinator {
+class AwesomeListCoordinator: PresentationCoordinator {
     typealias Result = ResultType<Int>
     
     static let errorMessages = ["Looks like you have a bad connection :(", "Umm can someone restart the WIFI?!", "RAGEEE!!!"]
