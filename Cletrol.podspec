@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/davoda/Cletrol.git', :tag => s.version }
 
   s.ios.deployment_target = '8.0'
-  s.source_files = 'DataViewController/Cletrol/**/*.swift'
+  s.source_files = 'Cletrol/**/*.swift'
 
   s.requires_arc = true
 end

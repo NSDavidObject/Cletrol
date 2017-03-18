@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DataViewController
+//  Cletrol
 //
 //  Created by David Elsonbaty on 2/23/17.
 //  Copyright © 2017 David Elsonbaty. All rights reserved.

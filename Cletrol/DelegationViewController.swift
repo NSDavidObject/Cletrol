@@ -1,6 +1,6 @@
 //
 //  DelegationViewController.swift
-//  DataViewController
+//  Cletrol
 //
 //  Created by David Elsonbaty on 2/23/17.
 //  Copyright © 2017 David Elsonbaty. All rights reserved.
@@ -30,11 +30,6 @@ public class DelegationViewController<C: PresentationCoordinator>: UIViewControl
     
     }
 
-    public lazy var transitionAnimator: DelegationViewControllerTransitionAnimator = {
-        let animator = DelegationViewControllerCrosFadeTransitionAnimator()
-        animator.delegationController = self
-        return animator
-    }()
     public var presentedPresenter: Presenter? {
         switch state {
         case .instantiated: return nil
@@ -162,8 +157,8 @@ fileprivate extension DelegationViewController {
     }
     
     func switchMainPresenter(from oldPresenter: Presenter? = nil, to newPresenter: Presenter) {
-        guard let newView = newPresenter.presentedView else { fatalError() }
 
+        let newView = newPresenter.presentedView
         let setupNewView = {
             newView.frame = self.view.bounds
             newView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -178,7 +173,7 @@ fileprivate extension DelegationViewController {
             setupNewView()
         }
 
-        transitionAnimator.animateTransition(from: oldPresenter, to: newPresenter) {
+        coordinator.transitionAnimator.animateTransition(from: oldPresenter, to: newPresenter) {
             if let newViewController = newPresenter as? UIViewController {
                 newViewController.didMove(toParentViewController: self)
             }
@@ -188,7 +183,7 @@ fileprivate extension DelegationViewController {
                 oldViewController.view.removeFromSuperview()
                 oldViewController.didMove(toParentViewController: nil)
             } else {
-                oldPresenter?.presentedView?.removeFromSuperview()
+                oldPresenter?.presentedView.removeFromSuperview()
             }
         }
     }

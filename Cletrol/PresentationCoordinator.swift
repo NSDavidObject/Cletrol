@@ -1,6 +1,6 @@
 //
 //  PresentationCoordinator.swift
-//  DataViewController
+//  Cletrol
 //
 //  Created by David Elsonbaty on 2/23/17.
 //  Copyright © 2017 David Elsonbaty. All rights reserved.
@@ -16,7 +16,8 @@ public protocol PresentationCoordinator: class {
     var contentControllerClass: ContentPresenter.Type { get }
     var loadingControllerClass: Presenter.Type? { get }
     var failureControllerClass: FailurePresenter.Type? { get }
-    
+    var transitionAnimator: DelegationViewControllerTransitionAnimator { get }
+
     func loadData(completion: @escaping ((ResultType) -> Void))
     func isFailure(_ result: ResultType) -> Bool
 }
